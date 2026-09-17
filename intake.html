@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Supplier Intake | ASAP Travel Africa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-red: #E3000E;
+      --primary-red-hover: #C10010;
+      --accent-coral: #FF5A63;
+      --dark-bg: #141313;
+      --dark-card: #1F1E1E;
+      --light-bg: #F7F5F3;
+      --light-border: #ECEAE7;
+      --text-dark: #1F1E1E;
+      --text-muted: #6E6A66;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.03em;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .header-logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header-logo img {
+      height: 40px;
+      margin: 0 auto;
+    }
+    .form-card {
+      background: #FFFFFF;
+      border: 1px solid var(--light-border);
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 50px -20px rgba(0,0,0,0.08);
+    }
+    .form-header {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .form-header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: var(--dark-bg);
+    }
+    .form-header p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .form-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark-bg);
+      margin: 28px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--light-bg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--light-border);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 15px;
+      background: #fff;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color .2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary-red);
+    }
+    .helper-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--primary-red);
+      color: #fff;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 9999px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      margin-top: 15px;
+      box-shadow: 0 10px 25px rgba(227, 0, 14, 0.25);
+    }
+    .btn-submit:hover {
+      background: var(--primary-red-hover);
+      transform: translateY(-1px);
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      color: var(--primary-red);
+    }
+    .success-badge {
+      background: rgba(227, 0, 14, 0.08);
+      color: var(--primary-red);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 600px) {
+      .form-card { padding: 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-logo">
+      <a href="https://asaptravelafrica.com" target="_blank">
+        <img src="https://asaptravelafrica.com/logo-full.png" alt="ASAP Travel Africa">
+      </a>
+    </div>
+
+    <div class="form-card">
+      <div class="form-header">
+        <span class="success-badge">SUPPLIER INTAKE</span>
+        <h1>Register Your Vehicle</h1>
+        <p>Complete this quick questionnaire. Our operations team in Zimbabwe will evaluate your vehicle's earning tier and schedule an inspection.</p>
+      </div>
+
+      <!-- If using inside GHL / GoHighLevel: You can either replace this form tag with your GHL Form Embed, or point the action to your webhook URL -->
+      <form id="supplierForm" action="#" method="POST">
+
+        <!-- OWNER DETAILS -->
+        <div class="form-section-title">👤 1. Owner Information</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Tendai Moyo" required>
+          </div>
+          <div class="form-group">
+            <label for="country">Current Country of Residence *</label>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Select country</option>
+              <option value="UK">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="AU">Australia</option>
+              <option value="CA">Canada</option>
+              <option value="SA">South Africa</option>
+              <option value="OTHER">Other Diaspora</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp / Phone Number *</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+44 7123 456789" required>
+            <div class="helper-text">Include your country code for international WhatsApp communication.</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="tendai@example.com" required>
+          </div>
+        </div>
+
+        <!-- VEHICLE DETAILS -->
+        <div class="form-section-title">🚗 2. Vehicle Information</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="makeModel">Make & Model *</label>
+            <input type="text" id="makeModel" name="makeModel" placeholder="e.g. Toyota Fortuner, Hilux, Honda Fit" required>
+          </div>
+          <div class="form-group">
+            <label for="year">Year of Manufacture *</label>
+            <input type="number" id="year" name="year" placeholder="e.g. 2019" min="2010" max="2026" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="location">Current Vehicle Location (in Zim) *</label>
+            <select id="location" name="location" required>
+              <option value="" disabled selected>Select city</option>
+              <option value="Harare">Harare</option>
+              <option value="Bulawayo">Bulawayo</option>
+              <option value="Victoria Falls">Victoria Falls</option>
+              <option value="Mutare">Mutare</option>
+              <option value="Other">Other Location</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="transmission">Transmission *</label>
+            <select id="transmission" name="transmission" required>
+              <option value="Automatic" selected>Automatic</option>
+              <option value="Manual">Manual</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="availability">When is the car available to join the fleet?</label>
+          <select id="availability" name="availability">
+            <option value="immediately">Immediately</option>
+            <option value="within_30_days">Within 30 Days</option>
+            <option value="exploring">Just exploring earning potential</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Additional Details / Questions</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Condition, mileage, special features, or any questions for our fleet manager..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Vehicle for Evaluation &rarr;</button>
+      </form>
+
+      <a href="index.html" class="back-link">&larr; Back to Overview</a>
+    </div>
+  </div>
+
+</body>
+</html>

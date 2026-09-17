@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner With ASAP Travel Africa | Vehicle Supplier Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-red: #E3000E;
+      --primary-red-hover: #C10010;
+      --accent-coral: #FF5A63;
+      --dark-bg: #141313;
+      --dark-card: #1F1E1E;
+      --light-bg: #F7F5F3;
+      --light-border: #ECEAE7;
+      --text-dark: #1F1E1E;
+      --text-muted: #6E6A66;
+      --text-light: #F7F5F3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-dark);
+      background-color: #FFFFFF;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.03em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Header */
+    header {
+      background: var(--dark-bg);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+    .logo img {
+      height: 38px;
+      width: auto;
+    }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      background: var(--primary-red);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .2s ease;
+    }
+    .header-cta:hover {
+      background: var(--primary-red-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      background: radial-gradient(circle at top right, rgba(227, 0, 14, 0.15), transparent 45%), var(--dark-bg);
+      color: var(--text-light);
+      padding: 100px 0 110px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent-coral);
+      margin-bottom: 24px;
+    }
+    .hero-tag::before, .hero-tag::after {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--primary-red);
+    }
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.12;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #FFFFFF;
+    }
+    .hero h1 span {
+      color: var(--primary-red);
+    }
+    .hero p.lead {
+      font-size: 19px;
+      color: rgba(247, 245, 243, 0.88);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* Stat Bar (Decorative Break) */
+    .stats-bar {
+      background: var(--light-bg);
+      border-bottom: 1px solid var(--light-border);
+      padding: 36px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+    .stat-item h3 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary-red);
+      margin-bottom: 4px;
+    }
+    .stat-item p {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Section Global */
+    .section {
+      padding: 90px 0;
+    }
+    .section-eyebrow {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--primary-red);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-title h2 {
+      font-size: 38px;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+    .section-title p {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* Steps Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .pillar-card {
+      background: #FFFFFF;
+      border: 1px solid var(--light-border);
+      padding: 36px 28px;
+      border-radius: 20px;
+      transition: all .3s ease;
+    }
+    .pillar-card:hover {
+      border-color: var(--primary-red);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.12);
+    }
+    .pillar-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(227, 0, 14, 0.08);
+      color: var(--primary-red);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+    .pillar-card h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+    .pillar-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Comparison Section */
+    .compare-section {
+      background: var(--light-bg);
+      padding: 90px 0;
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .compare-box {
+      padding: 40px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid var(--light-border);
+    }
+    .compare-box.bad {
+      border-left: 5px solid #6E6A66;
+    }
+    .compare-box.good {
+      border-left: 5px solid var(--primary-red);
+    }
+    .compare-box h3 {
+      font-size: 22px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .compare-list {
+      list-style: none;
+    }
+    .compare-list li {
+      margin-bottom: 16px;
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-dark);
+      line-height: 1.55;
+    }
+    .badge-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .badge-icon.bad {
+      background: #FEE2E2;
+      color: #DC2626;
+    }
+    .badge-icon.good {
+      background: #DCFCE7;
+      color: #16A34A;
+    }
+
+    /* Numbers Section (Decorative) */
+    .numbers-section {
+      background: #FFFFFF;
+      padding: 80px 0;
+      border-bottom: 1px solid var(--light-border);
+    }
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+    .number-card {
+      padding: 32px 24px;
+      border-radius: 20px;
+      background: var(--light-bg);
+      border: 1px solid var(--light-border);
+    }
+    .number-card .big-num {
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--primary-red);
+      margin-bottom: 8px;
+    }
+    .number-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Testimonials */
+    .testimonial-section {
+      background: var(--dark-bg);
+      color: #fff;
+      padding: 90px 0;
+      text-align: center;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .stars {
+      color: #FFB800;
+      font-size: 18px;
+      margin-bottom: 18px;
+      letter-spacing: 3px;
+    }
+    .quote-text {
+      font-size: 16px;
+      line-height: 1.65;
+      font-style: italic;
+      color: rgba(247,245,243,0.92);
+      margin-bottom: 24px;
+    }
+    .author-meta .author-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+    }
+    .author-meta .author-role {
+      font-size: 13px;
+      color: var(--accent-coral);
+    }
+
+    /* Final CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-bg) 100%);
+      border: 1px solid rgba(227, 0, 14, 0.35);
+      border-radius: 24px;
+      padding: 64px 40px;
+      text-align: center;
+      margin-top: 70px;
+      color: #fff;
+    }
+    .cta-banner h2 {
+      font-size: 38px;
+      margin-bottom: 16px;
+    }
+    .cta-banner p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      max-width: 620px;
+      margin: 0 auto 32px;
+    }
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      background: var(--primary-red);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 9999px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .2s;
+      box-shadow: 0 10px 25px rgba(227, 0, 14, 0.35);
+    }
+    .btn-main:hover {
+      background: var(--primary-red-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #0D0C0C;
+      color: var(--text-muted);
+      padding: 40px 0;
+      text-align: center;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 36px; }
+      .pillars-grid, .stats-grid, .compare-grid, .numbers-grid, .testimonial-grid { grid-template-columns: 1fr; }
+      .testimonial-card { padding: 30px 20px; }
+      .cta-banner { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="https://asaptravelafrica.com" class="logo" target="_blank">
+        <img src="https://asaptravelafrica.com/logo-light.png" alt="ASAP Travel Africa">
+      </a>
+      <!-- Note #1: Links to How It Works section instead of form -->
+      <a href="https://wa.me/14057461457?text=Hi%20ASAP%20Travel%2C%20I%27d%20like%20to%20partner%20my%20vehicle." class="header-cta">List Your Vehicle &rarr;</a>
+    </div>
+  </header>
+
+  <!-- HERO (Note #2: No button block, investment framing, updated headline) -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">Fleet Partnership &middot; Diaspora Supplier Program</div>
+      <h1>Become an ASAP Supplier and Earn <br><span>Passive USD Income</span></h1>
+      <p class="lead">Whether you are based abroad or planning your return to Zimbabwe, your vehicle can work for you. We manage the bookings, logistics, and maintenance while you receive USD income every month.</p>
+    </div>
+  </section>
+
+  <!-- STAT BAR (Note #3: Decorative design break) -->
+  <div class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <h3>2018</h3>
+        <p>Operating in Zimbabwe</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>USD Income Remitted</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Real-Time Telematics & Support</p>
+      </div>
+      <div class="stat-item">
+        <h3>Monthly</h3>
+        <p>Scheduled Disbursements</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS (Notes #4, #5, #6) -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-eyebrow">How It Works</span>
+        <h2>Hands-Off Management. Maximum Peace of Mind.</h2>
+        <p>We handle the day-to-day operations so you can sit back and receive consistent returns.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <h4>Submit the Supplier Form</h4>
+          <p>Share your vehicle details online. Our technical team then arranges an inspection directly with you or your representative—either at your premises or at our offices.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <h4>Fleet Integration & Deployment</h4>
+          <p>We fit verified tracking and security systems, finalize supplier agreements, and integrate your vehicle directly into our rental fleet.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <h4>Receive USD Income</h4>
+          <p>Enjoy reliable, hassle-free monthly returns where funds will be remitted to you directly in USD on schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON SECTION (Notes #7, #8: Lead-in line, project/family income focus, robust CSS icons) -->
+  <section class="compare-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Diaspora Vehicle Owners Choose ASAP</h2>
+        <p>See how your vehicle performs when left sitting parked compared to working with a structured fleet partner.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-box bad">
+          <h3><span class="badge-icon bad">&#10005;</span> Leaving It Idle / Informally Managed</h3>
+          <ul class="compare-list">
+            <li><span class="badge-icon bad">&#8226;</span> Battery drainage, tyre dry-rot, and unmonitored mechanical decay while parked.</li>
+            <li><span class="badge-icon bad">&#8226;</span> Ad-hoc borrower requests that produce wear and tear without financial return.</li>
+            <li><span class="badge-icon bad">&#8226;</span> Ongoing remittances sent from abroad to cover home maintenance and family expenses.</li>
+            <li><span class="badge-icon bad">&#8226;</span> Constant uncertainty over who is driving the vehicle and where it goes.</li>
+          </ul>
+        </div>
+        <div class="compare-box good">
+          <h3><span class="badge-icon good">&#10003;</span> Partnering with ASAP Travel</h3>
+          <ul class="compare-list">
+            <li><span class="badge-icon good">&#8226;</span> Routine mechanical servicing, detailing, and continuous upkeep managed for you.</li>
+            <li><span class="badge-icon good">&#8226;</span> Passive USD income that funds local building projects, investments, or relatives.</li>
+            <li><span class="badge-icon good">&#8226;</span> Regular USD income remitted directly to your account on schedule.</li>
+            <li><span class="badge-icon good">&#8226;</span> Commercial fleet insurance, live GPS monitoring, and vetted corporate clientele.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS SECTION (Note #9: Decorative metrics) -->
+  <section class="numbers-section">
+    <div class="container">
+      <div class="numbers-grid">
+        <div class="number-card">
+          <div class="big-num">8+</div>
+          <p>Years Running the Supplier Program</p>
+        </div>
+        <div class="number-card">
+          <div class="big-num">120+</div>
+          <p>Active Vehicle Suppliers to Date</p>
+        </div>
+        <div class="number-card">
+          <div class="big-num">$1.8M+</div>
+          <p>Total USD Paid Out to Suppliers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS & FINAL CTA (Notes #10, #11) -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-eyebrow" style="color: var(--accent-coral);">Partner Stories</span>
+        <h2 style="color: #fff;">Trusted by Zimbabweans Worldwide</h2>
+        <p style="color: rgba(255,255,255,0.7);">Real feedback from diasporans who put their vehicles to work back home.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="quote-text">
+            "My Fortuner was just parked at home in Harare. Enrolling it into the ASAP supplier program gave me regular USD income that directly purchased materials and funded labour for my house construction in Ruwa from start to roof level."
+          </div>
+          <div class="author-meta">
+            <div class="author-name">Tinashe M.</div>
+            <div class="author-role">Vehicle Supplier &middot; London, United Kingdom</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="quote-text">
+            "The monthly USD income is remitted straight to my account without delay, taking care of upkeep and supporting family back home seamlessly."
+          </div>
+          <div class="author-meta">
+            <div class="author-name">Chipo K.</div>
+            <div class="author-role">Vehicle Supplier &middot; Dallas, USA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BANNER (Note #11: Form-bound CTA) -->
+      <div class="cta-banner">
+        <h2>Ready to Become a Supplier?</h2>
+        <p>Fill out our short intake form. Our fleet manager will review your car's details and contact you within 24 hours.</p>
+        <a href="page2_intake.html" class="btn-main">Go To Vehicle Intake Form &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ASAP Travel Africa. All Rights Reserved. Built for Zimbabwe Diaspora Vehicle Partners.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
