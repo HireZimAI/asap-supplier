@@ -171,7 +171,6 @@
         <p>Complete this quick questionnaire. Our operations team in Zimbabwe will evaluate your vehicle's earning tier and schedule an inspection.</p>
       </div>
 
-      <!-- If using inside GHL / GoHighLevel: You can either replace this form tag with your GHL Form Embed, or point the action to your webhook URL -->
       <form id="supplierForm" action="#" method="POST">
 
         <!-- OWNER DETAILS -->
@@ -262,5 +261,26 @@
     </div>
   </div>
 
-</body>
+
+    <script>
+      document.getElementById('supplierForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var f = e.target;
+        var lines = [
+          'Hi ASAP Travel, I would like to register my vehicle for the Supplier Program.',
+          '',
+          'Name: ' + f.fullName.value,
+          'Country: ' + f.country.value,
+          'WhatsApp: ' + f.whatsapp.value,
+          'Email: ' + f.email.value,
+          'Vehicle: ' + f.makeModel.value + ' (' + f.year.value + ')',
+          'Location in Zimbabwe: ' + f.location.value,
+          'Transmission: ' + f.transmission.value,
+          'Availability: ' + f.availability.options[f.availability.selectedIndex].text
+        ];
+        if (f.notes.value.trim()) lines.push('Notes: ' + f.notes.value);
+        window.location.href = 'https://wa.me/14057461457?text=' + encodeURIComponent(lines.join('\n'));
+      });
+    </script>
+  </body>
 </html>
