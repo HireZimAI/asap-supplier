@@ -403,6 +403,101 @@
     }
 
     /* Responsive */
+
+    /* === MOCKUP: real supplier stories (screenshot evidence) === */
+    .feature-card {
+      display: grid; grid-template-columns: 320px 1fr;
+      background: var(--dark-card); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px; overflow: hidden; max-width: 1050px;
+      margin: 0 auto 10px; text-align: left;
+    }
+    .feature-media { position: relative; min-height: 300px; background: #0b0a0a; }
+    .feature-media img.poster, .feature-media video.poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .play-overlay {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), transparent 55%);
+    }
+    .play-btn {
+      width: 64px; height: 64px; border-radius: 50%; background: var(--primary-red);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 30px rgba(227,0,14,0.45);
+    }
+    .play-btn svg { width: 22px; height: 22px; fill: #fff; margin-left: 3px; }
+    .feature-badge {
+      position: absolute; top: 14px; left: 14px; z-index: 2;
+      background: rgba(0,0,0,0.68); color: #fff;
+      font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: .12em; padding: 6px 12px; border-radius: 999px;
+    }
+    .feature-body { padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+    .feature-quote-main { font-family: 'Space Grotesk', sans-serif; font-size: 23px; line-height: 1.38; color: #fff; letter-spacing: -0.01em; }
+    .feature-quote-sub { font-size: 15px; font-style: italic; color: rgba(247,245,243,0.8); line-height: 1.6; }
+    .mockup-note {
+      max-width: 1050px; margin: 0 auto 8px; text-align: center;
+      font-size: 12px; color: rgba(247,245,243,0.45); letter-spacing: .04em;
+    }
+    .story-link {
+      width: 2px; height: 30px; margin: 0 auto 30px;
+      background: linear-gradient(to bottom, rgba(255,90,99,0.55), rgba(255,90,99,0.12));
+      border-radius: 2px;
+    }
+    .renter-lead {
+      max-width: 760px; margin: 40px auto 22px; display: flex; align-items: center; gap: 16px;
+      font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase; color: rgba(247,245,243,0.55);
+    }
+    .renter-lead::before, .renter-lead::after {
+      content: ''; flex: 1; border-top: 1px dashed rgba(255,255,255,0.3);
+    }
+    .sarah-card {
+      display: grid; grid-template-columns: 280px 1fr;
+      background: var(--dark-card); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px; overflow: hidden; max-width: 760px;
+      margin: 0 auto 44px; text-align: left;
+    }
+    .sarah-media { position: relative; min-height: 320px; background: #0b0a0a; }
+    .sarah-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+    .sarah-badge {
+      position: absolute; top: 14px; left: 14px; z-index: 2;
+      background: rgba(0,0,0,0.68); color: #fff;
+      font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: .12em; padding: 6px 12px; border-radius: 999px;
+    }
+    .sarah-body { padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+    .sarah-quote { font-family: 'Space Grotesk', sans-serif; font-size: 20px; line-height: 1.5; color: #fff; }
+    img.emoji { height: 1.15em; width: 1.15em; vertical-align: -0.15em; display: inline-block; }
+    .evidence-lead {
+      max-width: 1050px; margin: 0 auto 22px; text-align: center;
+      font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase; color: rgba(247,245,243,0.65);
+    }
+    .shot-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+      max-width: 720px; margin: 0 auto 36px; align-items: start;
+    }
+    .shot-grid.single { grid-template-columns: 1fr; max-width: 440px; }
+    .shot { text-align: left; display: flex; flex-direction: column; gap: 10px; }
+    .shot img { width: 100%; height: auto; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); display: block; }
+    .shot-cap {
+      font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--accent-coral);
+    }
+    .shot-sub { font-size: 12px; color: rgba(247,245,243,0.55); margin-top: -6px; }
+    .snip-stack { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 26px; }
+    .snip-stack .shot img { border-radius: 14px; }
+    .shot.renter img { border: 1px dashed rgba(255,255,255,0.35); }
+    .shot.renter .shot-cap { color: rgba(247,245,243,0.55); }
+    @media (max-width: 900px) {
+      .feature-card { grid-template-columns: 1fr; }
+      .feature-media { min-height: 380px; }
+      .sarah-card { grid-template-columns: 1fr; max-width: 420px; }
+      .sarah-media { min-height: 380px; }
+      .shot-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .feature-body { padding: 28px 22px; }
+      .sarah-body { padding: 26px 22px; }
+      .feature-quote-main { font-size: 20px; }
+    }
+
     @media (max-width: 900px) {
       .hero h1 { font-size: 36px; }
       .pillars-grid, .stats-grid, .compare-grid, .numbers-grid, .testimonial-grid { grid-template-columns: 1fr; }
@@ -551,32 +646,79 @@
   <section class="testimonial-section">
     <div class="container">
       <div class="section-title">
-        <span class="section-eyebrow" style="color: var(--accent-coral);">Partner Stories</span>
-        <h2 style="color: #fff;">Trusted by Zimbabweans Worldwide</h2>
-        <p style="color: rgba(255,255,255,0.7);">Real feedback from diasporans who put their vehicles to work back home.</p>
+        <span class="section-eyebrow" style="color: var(--accent-coral);">Supplier Stories</span>
+        <h2 style="color: #fff;">Years in the Game. Real Supplier Stories.</h2>
+        <p style="color: rgba(255,255,255,0.7);">Actual screenshots from our WhatsApp, with names and profile pictures blocked out - plus stories in their own words.</p>
       </div>
 
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <div class="quote-text">
-            "My Fortuner was just parked at home in Harare. Enrolling it into the ASAP supplier program gave me regular USD income that directly purchased materials and funded labour for my house construction in Ruwa from start to roof level."
-          </div>
+      <div class="feature-card">
+        <div class="feature-media">
+          <span class="feature-badge">VIDEO &middot; 1:45</span>
+          <video class="poster" controls playsinline preload="none" poster="assets/sarah-poster.jpg" src="assets/sarah-video.mp4"></video>
+        </div>
+        <div class="feature-body">
+          <div class="feature-quote-main">&ldquo;You get your car reports on time, you get your payments on time, you get a return on an investment.&rdquo;</div>
+          <div class="feature-quote-sub">&ldquo;I would highly recommend the ASAP supplier program to anyone.&rdquo;</div>
           <div class="author-meta">
-            <div class="author-name">Tinashe M.</div>
-            <div class="author-role">Vehicle Supplier &middot; London, United Kingdom</div>
+            <div class="author-name">Sarah</div>
+            <div class="author-role">ASAP supplier &middot; in her own words</div>
           </div>
         </div>
+      </div>
+      <div class="story-link"></div>
 
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <div class="quote-text">
-            "The monthly USD income is remitted straight to my account without delay, taking care of upkeep and supporting family back home seamlessly."
-          </div>
-          <div class="author-meta">
-            <div class="author-name">Chipo K.</div>
-            <div class="author-role">Vehicle Supplier &middot; Dallas, USA</div>
-          </div>
+      <div class="sarah-card">
+        <div class="sarah-media">
+          <span class="sarah-badge">2 YEARS IN THE PROGRAM</span>
+          <img src="assets/sarah.jpg" alt="Sarah, a diaspora supplier, with her luggage beside one of her cars, seeing it in person for the first time">
+        </div>
+        <div class="sarah-body">
+          <div><span class="shot-cap">Sarah &middot; ASAP supplier</span></div>
+          <div class="sarah-quote">&ldquo;Lovely meeting AGS for the first time <img class="emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/263a.png" alt="">Thank you so much guys, the car is in excellent condition <img class="emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f44f-1f3fd.png" alt=""><img class="emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f44f-1f3fd.png" alt=""><img class="emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f44f-1f3fd.png" alt="">&rdquo;</div>
+          <div class="shot-sub" style="margin-top:0;">A diaspora supplier, meeting one of her cars in person for the first time after two years in the program.</div>
+        </div>
+      </div>
+
+      <p class="evidence-lead">Straight from the chat &middot; nothing retyped</p>
+      <div class="shot-grid">
+        <div class="shot">
+          <div><span class="shot-cap">Aug 2023 &middot; The ASAP team</span></div>
+          <img src="assets/shot-2023.jpg" alt="WhatsApp screenshot from August 2023 showing an ASAP vehicle delivery, sender name blocked out">
+          <div class="shot-sub">Delivering on the ground.</div>
+        </div>
+        <div class="shot">
+          <div><span class="shot-cap">Dec 2024 &middot; ASAP supplier</span></div>
+          <img src="assets/shot-2024.jpg" alt="WhatsApp screenshot from December 2024 showing a supplier's first payout message, sender name blocked out">
+          <div class="shot-sub">"Got my first payout" - and friends waiting to see it before joining.</div>
+        </div>
+      </div>
+      <div class="snip-stack">
+        <div class="shot">
+          <div><span class="shot-cap">Apr 2025 &middot; ASAP supplier</span></div>
+          <img src="assets/shot-funds.jpg" alt="WhatsApp screenshot from April 2025 showing a funds received message">
+          <div class="shot-sub">"Funds received, thank you."</div>
+        </div>
+      </div>
+      <div class="shot-grid single" style="margin-top:36px;">
+        <div class="shot">
+          <div><span class="shot-cap">May 2025 &middot; ASAP supplier</span></div>
+          <img src="assets/shot-bank.jpg" alt="WhatsApp screenshot from May 2025 showing a supplier confirming payment received, name blocked out">
+          <div class="shot-sub">Payment confirmed, straight from the bank notification.</div>
+        </div>
+      </div>
+      <div class="snip-stack">
+        <div class="shot">
+          <div><span class="shot-cap">Aug 2025 &middot; ASAP supplier</span></div>
+          <img src="assets/shot-report.jpg" alt="WhatsApp screenshot from August 2025 thanking ASAP for the report">
+          <div class="shot-sub">Monthly report received.</div>
+        </div>
+      </div>
+      <div class="renter-lead">And from the rental side</div>
+      <div class="snip-stack">
+        <div class="shot renter">
+          <div><span class="shot-cap">May 2025 &middot; Rental customer</span></div>
+          <img src="assets/shot-xtrail.jpg" alt="WhatsApp screenshot from May 2025 from a rental customer praising the Xtrail">
+          <div class="shot-sub">Why the vehicles keep earning.</div>
         </div>
       </div>
 
